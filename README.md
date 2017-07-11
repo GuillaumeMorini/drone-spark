@@ -2,7 +2,7 @@
 
 This is a plugin for [drone.io](http://drone.io), a Continuous Integration and Deployment server.
 
-***This plugin currently only supports Drone 0.4***
+***This plugin currently only supports Drone 0.7***
 
 This plugin will allow you to send notifications using [Cisco Spark](http://ciscospark.com).
 
@@ -58,7 +58,7 @@ EOF
 ## Docker
 
 ```
-docker run -i hpreston/drone-spark <<EOF
+docker run -i guismo/drone-spark <<EOF
 {
     "system": {
         "link_url": "http://drone.mycompany.com"
@@ -102,6 +102,6 @@ EOF
 
 This plugin is in active development and has the following features planned
 
-* Support for Drone 0.5
+* Support for multiple versions of Drone
 * Support for handlebar templating like other notification templates
 * Support for referencing the environment variables used by Drone
