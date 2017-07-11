@@ -92,8 +92,7 @@ def send_message(message_data, message_text):
     return response
 
 def main():
-    print(os.environ)
-    sys.stderr.write(os.environ)
+    #print(os.environ)
     PLUGIN_AUTH_TOKEN=os.getenv("PLUGIN_AUTH_TOKEN")
     if PLUGIN_AUTH_TOKEN is None:
         raise(LookupError("Requires valid Cisco Spark token to be provided.  "))
