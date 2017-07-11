@@ -115,15 +115,15 @@ def main():
     payload["repo"]={}
     payload["build"]={}
     payload["system"]["link_url"]=os.getenv("CI_SYSTEM_LINK")
-    payload["repo"]["full_name"]=os.getenv("CI_SYSTEM_NAME")
+    payload["repo"]["full_name"]=os.getenv("CI_REPO_NAME")
     payload["build"]["status"]=os.getenv("CI_BUILD_STATUS")
-    payload["build"]["author"]=""
-    payload["build"]["author_email"]=""
-    payload["build"]["number"]=os.getenv("CI_BUILD_FINISHED") # ???
-    payload["build"]["link_url"]=os.getenv("DRONE_BUILD_LINK")
-    payload["build"]["branch"]=""
-    payload["build"]["event"]=""
-    payload["build"]["message"]=""
+    payload["build"]["author"]=os.getenv("CI_COMMIT_AUTHOR_NAME")
+    payload["build"]["author_email"]=os.getenv("CI_COMMIT_AUTHOR_EMAIL")
+    payload["build"]["number"]=os.getenv("CI_BUILD_NUMBER")
+    payload["build"]["link_url"]=os.getenv("CI_BUILD_LINK")
+    payload["build"]["branch"]=os.getenv("CI_COMMIT_BRANCH")
+    payload["build"]["event"]=os.getenv("CI_BUILD_EVENT")
+    payload["build"]["message"]=os.getenv("CI_COMMIT_MESSAGE")
 
 
     # Send Standard message
